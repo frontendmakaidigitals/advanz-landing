@@ -8,7 +8,7 @@ const page = () => {
   return (
     <main>
       <Hero />
-      <ServicePackage />
+
       <Services />
       <Testimonial />
       <CTA />
