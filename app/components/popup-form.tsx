@@ -45,7 +45,7 @@ const PopupForm = ({ handleClose }: { handleClose: () => void }) => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -75,7 +75,7 @@ const PopupForm = ({ handleClose }: { handleClose: () => void }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("https://advanz-tech.vercel.app/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
