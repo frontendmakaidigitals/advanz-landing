@@ -127,7 +127,7 @@ const Services = () => {
           We Provide Professional Repair Services
         </h1>
         <p className="text-center max-w-2xl mx-auto mt-1">
-          Car Repair Services at Motorox Automotive Dubai
+          Car Repair Services at Advanz Tech Dubai
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-7">
