@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Charm, Domine } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/header";
 import Footer7 from "./components/footer/footer";
+import FloatingWhatsappIcon from "./components/floating-whatsapp-icon";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${charm.variable} ${domine.variable} antialiased relative`}
       >
         <Header />
+        <FloatingWhatsappIcon />
         {children}
         <Footer7 />
       </body>

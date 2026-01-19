@@ -1,6 +1,7 @@
 "use client";
 import { BadgeCheck, Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 const ServicePackage = () => {
   const cards = [
     {
@@ -107,7 +108,7 @@ const ServiceCard = ({ card }: CardProp) => {
     <div
       className={cn(
         `relative rounded-3xl p-8 flex flex-col justify-between overflow-hidden border border-slate-200 shadow backdrop-blur-sm`,
-        card.bgColor
+        card.bgColor,
       )}
     >
       {/* Header */}
@@ -116,7 +117,7 @@ const ServiceCard = ({ card }: CardProp) => {
           <h3
             className={cn(
               `text-lg font-medium  font-inter`,
-              isBasic && "text-white"
+              isBasic && "text-white",
             )}
           >
             {card.label}
@@ -124,7 +125,7 @@ const ServiceCard = ({ card }: CardProp) => {
           <p
             className={cn(
               `text-black ${card.btnColor} flex items-center gap-1 capitalize text-xs bg-slate-100 border rounded-lg px-3 py-1`,
-              isBasic && "text-black"
+              isBasic && "text-black",
             )}
           >
             <span>
@@ -138,7 +139,7 @@ const ServiceCard = ({ card }: CardProp) => {
           <p
             className={cn(
               `text-4xl font-semibold font-inter tracking-tighter`,
-              isBasic && "text-white"
+              isBasic && "text-white",
             )}
           >
             {card.coverage}
@@ -167,15 +168,21 @@ const ServiceCard = ({ card }: CardProp) => {
           ))}
         </ul>
       </div>
+      <Link
+        href={
+          "https://wa.me/97143707996?text=Hi%20I%20would%20like%20to%20book%20a%20service"
+        }
+      >
+        <button
+          className={cn(
+            `mt-8 w-full rounded-xl ${card.btnColor} ${card.btnTextColor} capitalize py-3 text-sm font-medium`,
+          )}
+        >
+          Book {card.btn} Package
+        </button>
+      </Link>
 
       {/* Button */}
-      <button
-        className={cn(
-          `mt-8 w-full rounded-xl ${card.btnColor} ${card.btnTextColor} capitalize py-3 text-sm font-medium`
-        )}
-      >
-        Book {card.btn} Package
-      </button>
     </div>
   );
 };

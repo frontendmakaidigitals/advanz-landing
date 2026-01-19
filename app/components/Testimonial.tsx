@@ -8,7 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import { Star, StarIcon } from "lucide-react";
+import { Star, StarIcon, User2 } from "lucide-react";
+import Link from "next/link";
 
 interface Review {
   id: number;
@@ -99,9 +100,15 @@ function Testimonial() {
           </div>
 
           <div className="pl-4">
-            <button className="bg-black px-3 py-1.5 text-white rounded-lg">
-              Leave a review
-            </button>
+            <Link
+              href={
+                "https://www.google.com/search?sca_esv=df7509ffe88df6d2&sxsrf=ANbL-n7H52ANlwtVm1TIQ6aIj4ddnRxplQ:1768822354495&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZ0y6bqs5taGBfc6JHwKf_7CCsEwoyaZc6txNlIxQJUCwPs1sP5o_enXr_pzEXIuK4rUOB-9d7NAcb8-LHksD7GkTRwu&q=Advanz+Tech+Reviews&sa=X&ved=2ahUKEwjX5_DgwJeSAxUc7jgGHUU_EXMQ0bkNegQINxAH&biw=1536&bih=730&dpr=1.25&aic=0#lrd=0x3e5f6994feb5fdf1:0x885a3f7b670c18ef,3,,,,"
+              }
+            >
+              <button className="bg-black px-3 py-1.5 text-white rounded-lg">
+                Leave a review
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -115,13 +122,13 @@ function Testimonial() {
             >
               <div
                 className="
-      flex-1            /* make card take full available height */
-      flex flex-col      /* keep column layout inside */
-      p-6
-      bg-white
-      rounded-xl
-      shadow-sm
-      border
+        flex-1            /* make card take full available height */
+        flex flex-col      /* keep column layout inside */
+        p-6
+        bg-white
+        rounded-xl
+        shadow-sm
+        border
     "
               >
                 {/* Rating & Date */}
@@ -138,14 +145,8 @@ function Testimonial() {
                 {/* Reviewer Info */}
                 <div className="flex items-center mt-auto">
                   {review.avatar ? (
-                    <div className="w-12 h-12 mr-3">
-                      <Image
-                        src={review.avatar}
-                        alt={review.name}
-                        width={48}
-                        height={48}
-                        className="rounded-full object-cover w-full h-full"
-                      />
+                    <div className="w-12 bg-slate-100 flex items-center justify-center  rounded-full h-12 mr-3">
+                      <User2 />
                     </div>
                   ) : (
                     <div className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-3">
@@ -169,8 +170,8 @@ function Testimonial() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden lg:block" />
+        <CarouselNext className="hidden lg:block" />
       </Carousel>
     </section>
   );

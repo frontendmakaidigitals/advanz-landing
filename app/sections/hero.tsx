@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import PopupForm from "../components/popup-form";
 import { useState } from "react";
-
+import Link from "next/link";
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
   const handleClick = () => {
@@ -34,18 +34,24 @@ const Hero = () => {
             equipped to handle every stage
           </p>
           <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-7">
-            <button className="px-4 py-2 bg-[#25D366] w-full lg:w-auto justify-center  hover:bg-green-500 flex items-center text-slate-50 border rounded">
-              <Image
-                src={"/icons/whatsapp-dark-filled.png"}
-                alt={""}
-                className="invert brightness-0"
-                width={20}
-                height={20}
-              />{" "}
-              <span className="ml-2 font-inter font-semibold tracking-tighter text-slate-50">
-                Book on WhatsApp
-              </span>
-            </button>
+            <Link
+              href={
+                "https://wa.me/97143707996?text=Hi%20I%20would%20like%20to%20book%20a%20service"
+              }
+            >
+              <button className="px-4 py-2 bg-[#25D366] w-full lg:w-auto justify-center  hover:bg-green-500 flex items-center text-slate-50 border rounded">
+                <Image
+                  src={"/icons/whatsapp-dark-filled.png"}
+                  alt={""}
+                  className="invert brightness-0"
+                  width={20}
+                  height={20}
+                />{" "}
+                <span className="ml-2 font-inter font-semibold tracking-tighter text-slate-50">
+                  Book on WhatsApp
+                </span>
+              </button>
+            </Link>
             <button
               onClick={handleClick}
               className="px-4 cursor-pointer py-2 hover:bg-yellow-500 border flex transition-colors duration-300 items-center text-slate-50 rounded"

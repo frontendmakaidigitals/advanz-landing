@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import PopupForm from "../components/popup-form";
 export const services = [
   {
     title: "General Repair",
@@ -113,10 +114,14 @@ export const services = [
 ];
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
-
+  const [open, setOpen] = useState(false);
   const visibleServices = showAll ? services : services.slice(0, 8);
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div className="max-w-6xl px-5 mx-auto my-5">
+      {open ? <PopupForm handleClose={handleClose} /> : null}
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold font-domine text-center">
           We Provide Professional Repair Services
@@ -152,7 +157,10 @@ const Services = () => {
         >
           {showAll ? "Show Less" : "Show More"}
         </button>
-        <button className="px-4 py-1.5 border border-black rounded">
+        <button
+          onClick={() => setOpen(true)}
+          className="px-4 py-1.5 border border-black rounded"
+        >
           Contact us
         </button>
       </div>

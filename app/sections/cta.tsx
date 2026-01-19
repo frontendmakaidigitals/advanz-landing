@@ -15,7 +15,9 @@ const CTA = () => {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#"
+            href={
+              "https://wa.me/97143707996?text=Hi%20I%20would%20like%20to%20book%20a%20service"
+            }
             className="inline-flex gap-2 items-center justify-center rounded-xl bg-green-100 px-6 py-3 text-sm font-semibold text-black hover:bg-green-50 transition"
           >
             <Image
@@ -29,7 +31,7 @@ const CTA = () => {
           </a>
 
           <a
-            href="tel:+971"
+            href="tel:+97143707996"
             className="inline-flex gap-2 items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
           >
             <Phone className="" width={20} height={20} /> Call Now: +971 4 370
