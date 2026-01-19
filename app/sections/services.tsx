@@ -120,7 +120,7 @@ const Services = () => {
     setOpen(false);
   };
   return (
-    <div className="max-w-6xl px-5 mx-auto my-5">
+    <div className="max-w-6xl px-5 mx-auto my-16">
       {open ? <PopupForm handleClose={handleClose} /> : null}
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold font-domine text-center">
