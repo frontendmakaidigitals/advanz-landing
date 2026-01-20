@@ -24,7 +24,7 @@ export default function Footer7() {
   return (
     <footer
       ref={footerRef}
-      className="bg-background px-4 border-t border-slate-200 pt-16 text-xs text-foreground md:px-6 pb-64 relative"
+      className="bg-background px-4 border-t border-slate-200 pt-16 text-xs md:px-6 pb-64 relative"
     >
       <div className="mx-auto max-w-7xl">
         {/* Your existing footer content */}
