@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 const FloatingWhatsappIcon = () => {
   return (
-    <div className="fixed bottom-10 right-18 z-50">
+    <div className="fixed bottom-10 right-5 lg:right-18 z-50">
       <div className="relative">
         {/* Ripple */}
         <motion.span
