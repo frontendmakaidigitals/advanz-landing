@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Charm, Domine } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import Header from "./components/Header/header";
 import Footer7 from "./components/footer/footer";
 import FloatingWhatsappIcon from "./components/floating-whatsapp-icon";
@@ -42,6 +43,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11036759643"
+          strategy="beforeInteractive"
+        />
+
+        <Script id="google-ads-init" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11036759643');
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${charm.variable} ${domine.variable} antialiased relative`}
       >
