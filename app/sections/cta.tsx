@@ -34,8 +34,7 @@ const CTA = () => {
             href="tel:+97143707996"
             className="inline-flex gap-2 items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
           >
-            <Phone className="" width={20} height={20} /> Call Now: +971 4 370
-            7996
+            <Phone className="" width={20} height={20} /> Call Now: +971 569939879
           </a>
         </div>
 
