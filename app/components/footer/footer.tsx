@@ -32,8 +32,7 @@ export default function Footer7() {
           <div className="md:col-span-2">
             <Logo className="text-4xl text-black" />
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              Empowering teams to achieve project success through effective
-              management and collaboration.
+              Dubai's most trusted Auto Repair & Maintenance Service Center
             </p>
             <div className="mt-5 flex space-x-4">
               <a

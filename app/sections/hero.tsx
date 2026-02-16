@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-7">
             <Link
               href={
-                "https://wa.me/97143707996?text=Hi%20I%20would%20like%20to%20book%20a%20service"
+                "https://wa.me/971569939879?text=Hi%20I%20would%20like%20to%20book%20a%20service"
               }
             >
               <button className="px-4 py-2 bg-[#25D366] w-full lg:w-auto justify-center  hover:bg-green-500 flex items-center text-slate-50 border rounded">
